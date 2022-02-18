@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Container } from "./styles";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
 import { shade } from "polished";
+import { Moon } from "../../assets/Moon";
+import { Sun } from "../../assets/Sun";
 
 interface Props {
   toggleTheme(): void;
@@ -10,10 +12,10 @@ interface Props {
 
 const SwitchComponent: React.FC<Props> = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext);
+
   return (
     <>
       <Container>
-        Hello World
         <Switch
           onChange={toggleTheme}
           checked={title === "dark"}

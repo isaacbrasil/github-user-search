@@ -13,4 +13,9 @@ body{
     color: #333;
     font-family: 'Space Mono', monospace;
 }
+input{
+    font-family: 'Space Mono', monospace;
+    color: ${(props) => props.theme.colors.terciary};
+
+}
 `;
